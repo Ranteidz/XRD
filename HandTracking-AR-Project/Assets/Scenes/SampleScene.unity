@@ -275,7 +275,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 645684702}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: cfe6bf9dece3e204c8260938154525f0, type: 3}
   m_Name: 
@@ -404,7 +404,7 @@ GameObject:
   - component: {fileID: 757492315}
   - component: {fileID: 757492314}
   - component: {fileID: 757492313}
-  - component: {fileID: 757492312}
+  - component: {fileID: 757492318}
   m_Layer: 0
   m_Name: Sphere
   m_TagString: Untagged
@@ -412,28 +412,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &757492312
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 757492311}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8c2842d745d614940910597fd34504d9, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  planetMaterial:
-  - {fileID: 2100000, guid: 34972828ff51d9748ba220cd0b1afad5, type: 2}
-  - {fileID: 2100000, guid: 004120944cd940e4d8cb151c83ff776e, type: 2}
-  - {fileID: 2100000, guid: 1316e68c18261b645876a785886cf621, type: 2}
-  - {fileID: 2100000, guid: b0740bb468adaad44bf44c7ab5f0d2c2, type: 2}
-  - {fileID: 2100000, guid: 8b6a0c5f571c82044b1af00a752bc319, type: 2}
-  - {fileID: 2100000, guid: 5cdfc4ee2836a4b4288f2bfa6aa59b6d, type: 2}
-  - {fileID: 2100000, guid: 481b54c885dd0b743a2af0749a61501c, type: 2}
-  - {fileID: 2100000, guid: 1ab580400064d794e894b9acf86411e6, type: 2}
-  - {fileID: 2100000, guid: 35d2df39385bcc14db799c22b5de413e, type: 2}
 --- !u!54 &757492313
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -528,6 +506,29 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &757492318
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 757492311}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cf711503e62671049bbbcba0b138592d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  arCubeMaterial:
+  - {fileID: 2100000, guid: 34972828ff51d9748ba220cd0b1afad5, type: 2}
+  - {fileID: 2100000, guid: 481b54c885dd0b743a2af0749a61501c, type: 2}
+  - {fileID: 2100000, guid: 1ab580400064d794e894b9acf86411e6, type: 2}
+  - {fileID: 2100000, guid: 5cdfc4ee2836a4b4288f2bfa6aa59b6d, type: 2}
+  - {fileID: 2100000, guid: 8b6a0c5f571c82044b1af00a752bc319, type: 2}
+  - {fileID: 2100000, guid: 1316e68c18261b645876a785886cf621, type: 2}
+  - {fileID: 2100000, guid: b0740bb468adaad44bf44c7ab5f0d2c2, type: 2}
+  - {fileID: 2100000, guid: 004120944cd940e4d8cb151c83ff776e, type: 2}
+  - {fileID: 2100000, guid: 35d2df39385bcc14db799c22b5de413e, type: 2}
+  smallCube: {fileID: 645684702}
 --- !u!1 &945444383
 GameObject:
   m_ObjectHideFlags: 0
