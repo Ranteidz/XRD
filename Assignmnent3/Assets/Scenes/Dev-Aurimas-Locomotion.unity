@@ -5871,7 +5871,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   LeftHand: {fileID: 1128178419}
   RightHand: {fileID: 2016674653}
-  CenterEyeCamera: {fileID: 491319810}
+  CenterEyeCamera: {fileID: 668326856}
   ForwardDirection: {fileID: 1705992591}
   LeftController: {fileID: 1128178421}
   ArmSwingButton: 2
@@ -8955,7 +8955,7 @@ MonoBehaviour:
   m_SphereCastRadius: 0.1
   m_RaycastMask:
     serializedVersion: 2
-    m_Bits: 4294967295
+    m_Bits: 119
   m_RaycastTriggerInteraction: 1
   m_HitClosestOnly: 0
   m_HoverToSelect: 0
