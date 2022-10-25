@@ -10,17 +10,14 @@ namespace _Scripts
         public float activationThreshold = 0.1f;
 
         // Update is called once per frame
-        void Update()
+        private void Update()
         {
-            if (rightTeleportRay)
-            {
-                rightTeleportRay.gameObject.SetActive(CheckIfActivated(rightTeleportRay));
-            }
-
+            if (rightTeleportRay) rightTeleportRay.gameObject.SetActive(CheckIfActivated(rightTeleportRay));
         }
+
         public bool CheckIfActivated(XRController controller)
         {
-            InputHelpers.IsPressed(controller.inputDevice, teleportActivationButton, out bool isActivated, activationThreshold);
+            controller.inputDevice.IsPressed(teleportActivationButton, out var isActivated, activationThreshold);
             return isActivated;
         }
     }

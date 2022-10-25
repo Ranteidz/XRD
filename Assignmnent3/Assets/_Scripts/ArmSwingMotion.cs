@@ -13,17 +13,17 @@ namespace _Scripts
         public InputHelpers.Button ArmSwingButton;
         public float speed = 70;
         private float handSpeed;
-        
-        private Vector3 PosPrevFrameLeftHand;
-        private Vector3 PosPrevFramRightHand;
         private Vector3 PlayerPosPrevFrame;
         private Vector3 PlayerPosThisFrame;
+
+        private Vector3 PosPrevFrameLeftHand;
+        private Vector3 PosPrevFramRightHand;
         private Vector3 PosThisFrameLeftHand;
         private Vector3 PosThisFrameRightHand;
 
-        
+
         // Start is called before the first frame update
-        void Start()
+        private void Start()
         {
             PlayerPosPrevFrame = transform.position;
             PosPrevFrameLeftHand = LeftHand.transform.position;
@@ -31,9 +31,9 @@ namespace _Scripts
         }
 
         // Update is called once per frame
-        void Update()
+        private void Update()
         {
-            float yRotation = CenterEyeCamera.transform.eulerAngles.y;
+            var yRotation = CenterEyeCamera.transform.eulerAngles.y;
             ForwardDirection.transform.eulerAngles = new Vector3(0, yRotation, 0);
 
             PosThisFrameLeftHand = LeftHand.transform.position;
@@ -45,22 +45,20 @@ namespace _Scripts
             var leftHandDistanceMoved = Vector3.Distance(PosPrevFrameLeftHand, PosThisFrameLeftHand);
             var rightHandDistanceMoved = Vector3.Distance(PosPrevFramRightHand, PosThisFrameRightHand);
 
-            handSpeed = ((leftHandDistanceMoved - playerDistanceMoved) +
-                         (rightHandDistanceMoved - playerDistanceMoved));
+            handSpeed = leftHandDistanceMoved - playerDistanceMoved +
+                        (rightHandDistanceMoved - playerDistanceMoved);
 
-            if (Time.timeSinceLevelLoad > 1f && CheckIfActivated(LeftController)) 
-            {
+            if (Time.timeSinceLevelLoad > 1f && CheckIfActivated(LeftController))
                 transform.position += ForwardDirection.transform.forward * handSpeed * speed * Time.deltaTime;
-            }
 
             PosPrevFrameLeftHand = PosThisFrameLeftHand;
             PosPrevFramRightHand = PosThisFrameRightHand;
             PlayerPosPrevFrame = PlayerPosThisFrame;
         }
 
-        bool CheckIfActivated(XRController xrController)
+        private bool CheckIfActivated(XRController xrController)
         {
-            InputHelpers.IsPressed(xrController.inputDevice, ArmSwingButton, out bool isActivated);
+            xrController.inputDevice.IsPressed(ArmSwingButton, out var isActivated);
             return isActivated;
         }
     }
