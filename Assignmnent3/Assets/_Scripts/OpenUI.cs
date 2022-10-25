@@ -12,8 +12,8 @@ public class OpenUI : MonoBehaviour
     public GameObject CharacterController;
     private bool isEnabled = false;
     public float xAxisOffset=0;
-    public float yAxisOffset=0;
-    public float zAxisOffset=0;
+    public float yAxisOffset=5;
+    public float zAxisOffset=5;
   
     void Update()
     {
@@ -36,7 +36,6 @@ public class OpenUI : MonoBehaviour
     bool CheckIfActivated(XRController controller)
     {
         InputHelpers.IsPressed(controller.inputDevice, AButton, out bool isActivated,0.1f);
-        Debug.Log(isActivated);
         return isActivated;
     }
 }

@@ -2,39 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="ed6851c2-57a7-4729-a544-045e16c21dee" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/../Assignmnent3/Assets/Scenes/Dev-Aurimas-Locomotion.unity" beforeDir="false" afterPath="$PROJECT_DIR$/../Assignmnent3/Assets/Scenes/Dev-Aurimas-Locomotion.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Assignmnent3/Assets/XR/Settings/OpenXR Package Settings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/../Assignmnent3/Assets/XR/Settings/OpenXR Package Settings.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Assignmnent3/Assets/_Scripts/CollectCoin.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../Assignmnent3/Assets/_Scripts/CollectCoin.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Assignmnent3/Logs/AssetImportWorker0-prev.log" beforeDir="false" afterPath="$PROJECT_DIR$/../Assignmnent3/Logs/AssetImportWorker0-prev.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Assignmnent3/Logs/AssetImportWorker0.log" beforeDir="false" afterPath="$PROJECT_DIR$/../Assignmnent3/Logs/AssetImportWorker0.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Assignmnent3/Logs/AssetImportWorker1-prev.log" beforeDir="false" afterPath="$PROJECT_DIR$/../Assignmnent3/Logs/AssetImportWorker1-prev.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Assignmnent3/Logs/AssetImportWorker1.log" beforeDir="false" afterPath="$PROJECT_DIR$/../Assignmnent3/Logs/AssetImportWorker1.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Assignmnent3/Logs/AssetImportWorker2-prev.log" beforeDir="false" afterPath="$PROJECT_DIR$/../Assignmnent3/Logs/AssetImportWorker2-prev.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Assignmnent3/Assets/_Scripts/OpenUI.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../Assignmnent3/Assets/_Scripts/OpenUI.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Assignmnent3/Assets/_Scripts/RotateObject.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../Assignmnent3/Assets/_Scripts/RotateObject.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../Assignmnent3/Logs/AssetImportWorker2.log" beforeDir="false" afterPath="$PROJECT_DIR$/../Assignmnent3/Logs/AssetImportWorker2.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Assignmnent3/Logs/AssetImportWorker3-prev.log" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Assignmnent3/Logs/AssetImportWorker4-prev.log" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Assignmnent3/Logs/AssetImportWorker5-prev.log" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Assignmnent3/Logs/AssetImportWorker6-prev.log" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Assignmnent3/Logs/AssetImportWorker7-prev.log" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Assignmnent3/Logs/shadercompiler-AssetImportWorker0.log" beforeDir="false" afterPath="$PROJECT_DIR$/../Assignmnent3/Logs/shadercompiler-AssetImportWorker0.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Assignmnent3/Logs/shadercompiler-UnityShaderCompiler.exe1.log" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Assignmnent3/Logs/shadercompiler-UnityShaderCompiler.exe2.log" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Assignmnent3/Logs/shadercompiler-UnityShaderCompiler.exe3.log" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Assignmnent3/Logs/shadercompiler-UnityShaderCompiler.exe4.log" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Assignmnent3/UserSettings/Layouts/default-2021.dwlt" beforeDir="false" afterPath="$PROJECT_DIR$/../Assignmnent3/UserSettings/Layouts/default-2021.dwlt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Assignmnent3/obj/Debug/Assembly-CSharp.csproj.AssemblyReference.cache" beforeDir="false" afterPath="$PROJECT_DIR$/../Assignmnent3/obj/Debug/Assembly-CSharp.csproj.AssemblyReference.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Assignmnent3/UserSettings/EditorUserSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/../Assignmnent3/UserSettings/EditorUserSettings.asset" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.XRD-Marker-AR/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.XRD-Marker-AR/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Logs/AssetImportWorker0-prev.log" beforeDir="false" afterPath="$PROJECT_DIR$/Logs/AssetImportWorker0-prev.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Logs/AssetImportWorker0.log" beforeDir="false" afterPath="$PROJECT_DIR$/Logs/AssetImportWorker0.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Logs/AssetImportWorker1-prev.log" beforeDir="false" afterPath="$PROJECT_DIR$/Logs/AssetImportWorker1-prev.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Logs/AssetImportWorker1.log" beforeDir="false" afterPath="$PROJECT_DIR$/Logs/AssetImportWorker1.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Logs/AssetImportWorker2-prev.log" beforeDir="false" afterPath="$PROJECT_DIR$/Logs/AssetImportWorker2-prev.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Logs/AssetImportWorker2.log" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Logs/AssetImportWorker3-prev.log" beforeDir="false" afterPath="$PROJECT_DIR$/Logs/AssetImportWorker3-prev.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Logs/AssetImportWorker3.log" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Logs/shadercompiler-AssetImportWorker0.log" beforeDir="false" afterPath="$PROJECT_DIR$/Logs/shadercompiler-AssetImportWorker0.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Logs/shadercompiler-UnityShaderCompiler.exe0.log" beforeDir="false" afterPath="$PROJECT_DIR$/Logs/shadercompiler-UnityShaderCompiler.exe0.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/obj/Debug/Assembly-CSharp.csproj.AssemblyReference.cache" beforeDir="false" afterPath="$PROJECT_DIR$/obj/Debug/Assembly-CSharp.csproj.AssemblyReference.cache" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -90,6 +62,7 @@
       <updated>1662734727258</updated>
       <workItem from="1662734743921" duration="5000" />
       <workItem from="1666713501792" duration="941000" />
+      <workItem from="1666721132322" duration="2619000" />
     </task>
     <servers />
   </component>
