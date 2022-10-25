@@ -5719,7 +5719,7 @@ GameObject:
   - component: {fileID: 829848546}
   - component: {fileID: 829848547}
   - component: {fileID: 829848548}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: VR Rig
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6803,7 +6803,7 @@ GameObject:
   - component: {fileID: 1545375248}
   - component: {fileID: 1545375247}
   - component: {fileID: 1545375252}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Sphere
   m_TagString: Untagged
   m_Icon: {fileID: 0}
