@@ -5873,6 +5873,8 @@ MonoBehaviour:
   RightHand: {fileID: 2016674653}
   CenterEyeCamera: {fileID: 491319810}
   ForwardDirection: {fileID: 1705992591}
+  LeftController: {fileID: 1128178421}
+  ArmSwingButton: 2
   speed: 70
 --- !u!1 &854485862
 GameObject:

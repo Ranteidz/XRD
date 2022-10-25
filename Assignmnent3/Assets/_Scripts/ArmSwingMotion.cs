@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.XR.Interaction.Toolkit;
 
 namespace _Scripts
 {
@@ -8,7 +9,8 @@ namespace _Scripts
         public GameObject RightHand;
         public GameObject CenterEyeCamera;
         public GameObject ForwardDirection;
-
+        public XRController LeftController;
+        public InputHelpers.Button ArmSwingButton;
         public float speed = 70;
         private float handSpeed;
         
@@ -46,7 +48,7 @@ namespace _Scripts
             handSpeed = ((leftHandDistanceMoved - playerDistanceMoved) +
                          (rightHandDistanceMoved - playerDistanceMoved));
 
-            if (Time.timeSinceLevelLoad > 1f)
+            if (Time.timeSinceLevelLoad > 1f && CheckIfActivated(LeftController)) 
             {
                 transform.position += ForwardDirection.transform.forward * handSpeed * speed * Time.deltaTime;
             }
@@ -54,6 +56,12 @@ namespace _Scripts
             PosPrevFrameLeftHand = PosThisFrameLeftHand;
             PosPrevFramRightHand = PosThisFrameRightHand;
             PlayerPosPrevFrame = PlayerPosThisFrame;
+        }
+
+        bool CheckIfActivated(XRController xrController)
+        {
+            InputHelpers.IsPressed(xrController.inputDevice, ArmSwingButton, out bool isActivated);
+            return isActivated;
         }
     }
 }
