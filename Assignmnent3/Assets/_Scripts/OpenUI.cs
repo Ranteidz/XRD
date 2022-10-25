@@ -1,39 +1,42 @@
 using UnityEngine;
 using UnityEngine.XR.Interaction.Toolkit;
 
-public class OpenUI : MonoBehaviour
+namespace _Scripts
 {
-    public XRController rightController;
-    public InputHelpers.Button AButton;
-    public GameObject UI;
-    public GameObject CharacterController;
-    public float xAxisOffset;
-    public float yAxisOffset = 5;
-    public float zAxisOffset = 5;
-    private bool isEnabled;
-
-    private void Update()
+    public class OpenUI : MonoBehaviour
     {
-        if (CheckIfActivated(rightController))
+        public XRController rightController;
+        public InputHelpers.Button AButton;
+        public GameObject UI;
+        public GameObject CharacterController;
+        public float xAxisOffset;
+        public float yAxisOffset = 5;
+        public float zAxisOffset = 5;
+        private bool _isEnabled;
+
+        private void Update()
         {
-            isEnabled = true;
-            UI.SetActive(isEnabled);
+            if (CheckIfActivated(rightController))
+            {
+                _isEnabled = true;
+                UI.SetActive(_isEnabled);
 
-            var characterPos = CharacterController.transform.position;
+                var characterPos = CharacterController.transform.position;
 
-            UI.transform.position = new Vector3(characterPos.x + xAxisOffset, characterPos.y + yAxisOffset,
-                characterPos.z + zAxisOffset);
+                UI.transform.position = new Vector3(characterPos.x + xAxisOffset, characterPos.y + yAxisOffset,
+                    characterPos.z + zAxisOffset);
+            }
+            else
+            {
+                _isEnabled = false;
+                UI.SetActive(_isEnabled);
+            }
         }
-        else
+
+        private bool CheckIfActivated(XRController controller)
         {
-            isEnabled = false;
-            UI.SetActive(isEnabled);
+            controller.inputDevice.IsPressed(AButton, out var isActivated, 0.1f);
+            return isActivated;
         }
-    }
-
-    private bool CheckIfActivated(XRController controller)
-    {
-        controller.inputDevice.IsPressed(AButton, out var isActivated, 0.1f);
-        return isActivated;
     }
 }

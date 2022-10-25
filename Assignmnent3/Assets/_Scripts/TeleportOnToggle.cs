@@ -8,8 +8,7 @@ namespace _Scripts
         public XRController rightTeleportRay;
         public InputHelpers.Button teleportActivationButton;
         public float activationThreshold = 0.1f;
-
-        // Update is called once per frame
+      
         private void Update()
         {
             if (rightTeleportRay) rightTeleportRay.gameObject.SetActive(CheckIfActivated(rightTeleportRay));

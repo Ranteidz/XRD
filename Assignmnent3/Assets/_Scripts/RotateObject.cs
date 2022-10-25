@@ -1,9 +1,12 @@
 using UnityEngine;
 
-public class RotateObject : MonoBehaviour
+namespace _Scripts
 {
-    private void Update()
+    public class RotateObject : MonoBehaviour
     {
-        transform.Rotate(new Vector3(0, 1, 0) * 50f * Time.deltaTime);
+        private void Update()
+        {
+            transform.Rotate(new Vector3(0, 1, 0) * 50f * Time.deltaTime);
+        }
     }
 }

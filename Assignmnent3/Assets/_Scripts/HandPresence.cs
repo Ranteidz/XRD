@@ -2,83 +2,83 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.XR;
 
-public class HandPresence : MonoBehaviour
+namespace _Scripts
 {
-    public bool showController;
-    public InputDeviceCharacteristics controllerCharacteristics;
-    public List<GameObject> controllerPrefabs;
-    public GameObject handModelPrefab;
-    private Animator handAnimator;
-    private GameObject spawnedController;
-    private GameObject spawnedHandModel;
-
-    private InputDevice targetDevice;
-
-    // Start is called before the first frame update
-    private void Start()
+    public class HandPresence : MonoBehaviour
     {
-        TryInitialize();
-    }
-
-    // Update is called once per frame
-    private void Update()
-    {
-        if (!targetDevice.isValid)
+        public bool showController;
+        public InputDeviceCharacteristics controllerCharacteristics;
+        public List<GameObject> controllerPrefabs;
+        public GameObject handModelPrefab;
+        private Animator _handAnimator;
+        private GameObject _spawnedController;
+        private GameObject _spawnedHandModel;
+        private InputDevice _targetDevice;
+        
+        private void Start()
         {
             TryInitialize();
         }
-        else
+
+        private void Update()
         {
-            if (showController)
+            if (!_targetDevice.isValid)
             {
-                spawnedHandModel.SetActive(false);
-                spawnedController.SetActive(true);
+                TryInitialize();
             }
             else
             {
-                spawnedHandModel.SetActive(true);
-                spawnedController.SetActive(false);
-                UpdateHandAnimation();
+                if (showController)
+                {
+                    _spawnedHandModel.SetActive(false);
+                    _spawnedController.SetActive(true);
+                }
+                else
+                {
+                    _spawnedHandModel.SetActive(true);
+                    _spawnedController.SetActive(false);
+                    UpdateHandAnimation();
+                }
             }
         }
-    }
 
-    private void TryInitialize()
-    {
-        var devices = new List<InputDevice>();
-
-        InputDevices.GetDevicesWithCharacteristics(controllerCharacteristics, devices);
-
-        foreach (var item in devices) Debug.Log(item.name + item.characteristics);
-
-        if (devices.Count > 0)
+        private void TryInitialize()
         {
-            targetDevice = devices[0];
-            var prefab = controllerPrefabs.Find(controller => controller.name == targetDevice.name);
-            if (prefab)
-            {
-                spawnedController = Instantiate(prefab, transform);
-            }
-            else
-            {
-                Debug.LogError("Error");
-                spawnedController = Instantiate(controllerPrefabs[0], transform);
-            }
+            var devices = new List<InputDevice>();
 
-            spawnedHandModel = Instantiate(handModelPrefab, transform);
-            handAnimator = spawnedHandModel.GetComponent<Animator>();
+            InputDevices.GetDevicesWithCharacteristics(controllerCharacteristics, devices);
+
+            foreach (var item in devices) Debug.Log(item.name + item.characteristics);
+
+            if (devices.Count > 0)
+            {
+                _targetDevice = devices[0];
+                var prefab = controllerPrefabs.Find(controller => controller.name == _targetDevice.name);
+                if (prefab)
+                {
+                    _spawnedController = Instantiate(prefab, transform);
+                }
+                else
+                {
+                    Debug.LogError("Error");
+                    _spawnedController = Instantiate(controllerPrefabs[0], transform);
+                }
+
+                _spawnedHandModel = Instantiate(handModelPrefab, transform);
+                _handAnimator = _spawnedHandModel.GetComponent<Animator>();
+            }
         }
-    }
 
-    private void UpdateHandAnimation()
-    {
-        if (targetDevice.TryGetFeatureValue(CommonUsages.trigger, out var triggerValue))
-            handAnimator.SetFloat("Trigger", triggerValue);
-        else
-            handAnimator.SetFloat("Trigger", 0);
-        if (targetDevice.TryGetFeatureValue(CommonUsages.grip, out var gripValue))
-            handAnimator.SetFloat("Grip", gripValue);
-        else
-            handAnimator.SetFloat("Grip", 0);
+        private void UpdateHandAnimation()
+        {
+            if (_targetDevice.TryGetFeatureValue(CommonUsages.trigger, out var triggerValue))
+                _handAnimator.SetFloat("Trigger", triggerValue);
+            else
+                _handAnimator.SetFloat("Trigger", 0);
+            if (_targetDevice.TryGetFeatureValue(CommonUsages.grip, out var gripValue))
+                _handAnimator.SetFloat("Grip", gripValue);
+            else
+                _handAnimator.SetFloat("Grip", 0);
+        }
     }
 }

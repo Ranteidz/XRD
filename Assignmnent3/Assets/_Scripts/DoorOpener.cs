@@ -1,21 +1,23 @@
 using UnityEngine;
 
-public class DoorOpener : MonoBehaviour
+namespace _Scripts
 {
-    [SerializeField] public GameObject KeyCollider;
-    private bool isDoorOpen;
-
-    private void OnCollisionEnter(Collision collision)
+    public class DoorOpener : MonoBehaviour
     {
-        if (collision.gameObject.tag.Equals("Key") && !isDoorOpen)
+        private bool _isDoorOpen;
+
+        private void OnCollisionEnter(Collision collision)
         {
-            OpenDoor();
-            isDoorOpen = true;
+            if (collision.gameObject.tag.Equals("Key") && !_isDoorOpen)
+            {
+                OpenDoor();
+                _isDoorOpen = true;
+            }
         }
-    }
 
-    private void OpenDoor()
-    {
-        gameObject.transform.Rotate(0, 0, 90);
+        private void OpenDoor()
+        {
+            gameObject.transform.Rotate(0, 0, 90);
+        }
     }
 }

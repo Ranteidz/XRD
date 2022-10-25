@@ -9,39 +9,37 @@ namespace _Scripts
         public XRNode inputSource;
         public float speed = 1;
         public float additionalHeight = 0.2f;
-        private CharacterController character;
-        private Vector2 inputAxis;
-        private XROrigin rig;
-
-        // Start is called before the first frame update
+        private CharacterController _character;
+        private Vector2 _inputAxis;
+        private XROrigin _rig;
+       
         private void Start()
         {
-            character = GetComponent<CharacterController>();
-            rig = GetComponent<XROrigin>();
+            _character = GetComponent<CharacterController>();
+            _rig = GetComponent<XROrigin>();
         }
-
-        // Update is called once per frame
+       
         private void Update()
         {
             var device = InputDevices.GetDeviceAtXRNode(inputSource);
-            device.TryGetFeatureValue(CommonUsages.primary2DAxis, out inputAxis);
+            device.TryGetFeatureValue(CommonUsages.primary2DAxis, out _inputAxis);
         }
 
         private void FixedUpdate()
         {
             FollowHeadset();
-            var headYaw = Quaternion.Euler(0, rig.Camera.transform.eulerAngles.y, 0);
-            var direction = headYaw * new Vector3(inputAxis.x, 0, inputAxis.y);
+            var headYaw = Quaternion.Euler(0, _rig.Camera.transform.eulerAngles.y, 0);
+            var direction = headYaw * new Vector3(_inputAxis.x, 0, _inputAxis.y);
 
-            character.Move(direction * Time.fixedDeltaTime * speed);
+            _character.Move(direction * Time.fixedDeltaTime * speed);
         }
 
         private void FollowHeadset()
         {
-            character.height = rig.CameraInOriginSpaceHeight + additionalHeight;
-            var capsuleCenter = transform.InverseTransformPoint(rig.Origin.transform.position);
-            character.center =
-                new Vector3(capsuleCenter.x, character.height / 2 + character.skinWidth, capsuleCenter.z);
+            _character.height = _rig.CameraInOriginSpaceHeight + additionalHeight;
+            var capsuleCenter = transform.InverseTransformPoint(_rig.Origin.transform.position);
+            _character.center =
+                new Vector3(capsuleCenter.x, _character.height / 2 + _character.skinWidth, capsuleCenter.z);
         }
     }
 }

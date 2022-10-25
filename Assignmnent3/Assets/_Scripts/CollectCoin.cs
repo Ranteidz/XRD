@@ -1,18 +1,21 @@
 using UnityEngine;
 
-public class CollectCoin : MonoBehaviour
+namespace _Scripts
 {
-    public int coins;
-
-    private void OnTriggerEnter(Collider other)
+    public class CollectCoin : MonoBehaviour
     {
-        if (other.gameObject.tag == "Coin")
-        {
-            coins = coins + 1;
-            other.gameObject.SetActive(false);
-            Destroy(other.gameObject);
-        }
+        public int coins;
 
-        InformationUIController.SetCoinsCollected(coins);
+        private void OnTriggerEnter(Collider other)
+        {
+            if (other.gameObject.tag.Equals("Coin"))
+            {
+                coins = coins + 1;
+                other.gameObject.SetActive(false);
+                Destroy(other.gameObject);
+            }
+
+            InformationUIController.SetCoinsCollected(coins);
+        }
     }
 }
