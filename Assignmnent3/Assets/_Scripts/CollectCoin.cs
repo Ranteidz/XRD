@@ -14,5 +14,6 @@ public class CollectCoin : MonoBehaviour
             other.gameObject.SetActive(false);
             Destroy(other.gameObject);
         }
+        InformationUIController.SetCoinsCollected(coins);
     }
 }
