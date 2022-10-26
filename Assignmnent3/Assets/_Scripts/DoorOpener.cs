@@ -18,7 +18,7 @@ namespace _Scripts
 
         private void OpenDoor()
         {
-            gameObject.transform.Rotate(0, 0, 90);
+            gameObject.transform.Rotate(0, 0, -90);
         }
     }
 }
