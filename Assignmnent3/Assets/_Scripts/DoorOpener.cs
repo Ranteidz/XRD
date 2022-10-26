@@ -12,6 +12,7 @@ namespace _Scripts
             {
                 OpenDoor();
                 _isDoorOpen = true;
+                Object.Destroy(collision.gameObject);
             }
         }
 
